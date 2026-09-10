@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: mechanic-proxy
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: MECHANIC_API_TOKEN
+        sync: false
+      - key: PROXY_KEY
+        sync: false
